@@ -2,9 +2,9 @@
 
 ap_int<32> MUL_MAC(ap_int<8> A, ap_int<8> W0, ap_int<8> W1)
 {
-    // method-1, note that (W0, ap_uint<16>(0)) not equals the ((ap_int<25>)w0)<<16, so this method is wrong 
-    //ap_int<24> W;
-    //W = (W0, ap_uint<16>(0)) + ap_int<24>(W1);
+    // method-1,
+    //ap_int<25> W;
+    //W = (ap_int<9>W0, ap_uint<16>(0)) + ap_int<25>(W1);
     
     //method-2
     // following method is right and better, lwq-fixed
