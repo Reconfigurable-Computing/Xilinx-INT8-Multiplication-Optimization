@@ -2,6 +2,7 @@
 
 ap_int<36> MUL_MAC(ap_int<9> A, ap_int<9> W0, ap_int<9> W1)
 {
+    //若INT9可以取到-256，则W会发生溢出，导致计算结果错误。
     ap_int<27> W;
     W = (W0, ap_uint<18>(0)) + ap_int<27>(W1);
 
